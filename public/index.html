@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Trip Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />  
+  <link rel="stylesheet" href="./style.css"></link>
+</head>
+
+<body>
+  <header>
+    <h1>TripPlanner</h1>
+  </header>
+  <div id="app">
+    <div id="map"></div>
+    <aside>
+      <div class="panel" id="options-panel">
+        <div>
+          <h2>Hotels</h2>
+          <select id="hotels-choices">
+            <option>An Hotel</option>
+          </select>
+          <button id="hotels-add" class="options-btn">+</button>
+        </div>
+        <div>
+          <h2>Restaurants</h2>
+          <select id="restaurants-choices">
+            <option>A Restaurant</option>
+          </select>
+          <button id="restaurants-add" class="options-btn">+</button>
+        </div>
+        <div>
+          <h2>Activities</h2>
+          <select id="activities-choices">
+            <option>An Activity</option>
+          </select>
+          <button id="activities-add" class="options-btn">+</button>
+        </div>
+      </div>
+      <div class="panel" id="itinerary">
+        <div>
+          <h2>My Hotel</h2>
+          <ul class="list-group" id="hotels-list">
+
+          </ul>
+        </div>
+        <div>
+          <h2>My Restaurants</h2>
+          <ul class="list-group" id="restaurants-list">
+
+          </ul>
+        </div>
+        <div>
+          <h2>My Activities</h2>
+          <ul class="list-group" id="activities-list">
+
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <script src="./bundle.js"></script>
+</body>
+
+</html>
