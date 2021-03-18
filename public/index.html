@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Trip Planner</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="./style.css"></link>
+  <title>LANGBACK</title>
+  <script src="../src/script.js" defer></script>
 </head>
 
 <body>
   <header>
-    <h1>TripPlanner</h1>
+    <h1 id="lang">LANG</h1><h1 id="back">BACK</h1>
   </header>
+  <div id="welcome"><i> Welcome to LANGBACK! Click on a music note in the map to learn an Indigenous language. </i></div>
   <div id="app">
     <div id="map"></div>
-    <aside>
-      <div class="panel" id="options-panel">
-        <div>
-          <h2>Hotels</h2>
-          <select id="hotels-choices">
-            <option>An Hotel</option>
-          </select>
-          <button id="hotels-add" class="options-btn">+</button>
-        </div>
-        <div>
-          <h2>Restaurants</h2>
-          <select id="restaurants-choices">
-            <option>A Restaurant</option>
-          </select>
-          <button id="restaurants-add" class="options-btn">+</button>
-        </div>
-        <div>
-          <h2>Activities</h2>
-          <select id="activities-choices">
-            <option>An Activity</option>
-          </select>
-          <button id="activities-add" class="options-btn">+</button>
-        </div>
+    <aside id="language-learning-panel">
+      <textarea id="text"></textarea>
+      <div class="adjustments">
+        <label for="speed">Speed</label>
+        <input type="number" name="speed" id="adjustments__speed" min=".5" max="3" step=".5" value="1">
+        <button id="adjustments__play-button">Play</button>
+        <button id="adjustments__pause-button">Pause</button>
+        <button id="adjustments__stop-button">Stop</button>
       </div>
-      <div class="panel" id="itinerary">
-        <div>
-          <h2>My Hotel</h2>
-          <ul class="list-group" id="hotels-list">
-
-          </ul>
-        </div>
-        <div>
-          <h2>My Restaurants</h2>
-          <ul class="list-group" id="restaurants-list">
-
-          </ul>
-        </div>
-        <div>
-          <h2>My Activities</h2>
-          <ul class="list-group" id="activities-list">
-
-          </ul>
-        </div>
+      <div class="panel" id="word-bank">
+        <div class="vocab__word">
+            <div class="vocab__lines">
+              <a href="#!" class="vocab__btn" id="mohegan-how-are-you">Tôn kutayuw?</a>
+              <a href="#!" class="vocab__btn" id="translation">
+                How are you?
+              </a>
+            </div>
+          </div>
+          <div class="vocab__word">
+            <div class="vocab__lines">
+              <a href="#!" class="vocab__btn" id="mohegan-im-well-and-you">Nukôkicá. Ki tôn kutaya?
+              </a>
+              <a href="#!" class="vocab__btn" id="translation">
+                I am well. And how are you?
+              </a>
+            </div>
+          </div>
+          <div class="vocab__word">
+            <div class="vocab__lines">
+              <a href="#!" class="vocab__btn" id="mohegan-goodbye-to-one">Nahunshásh.
+              </a>
+              <a href="#!" class="vocab__btn" id="translation">
+                Goodbye (to one person).
+              </a>
+            </div>
+          </div>
+          <div class="vocab__word">
+            <div class="vocab__lines">
+              <a href="#!" class="vocab__btn" id="mohegan-goodbye-to-many">Nahunsháq.
+              </a>
+              <a href="#!" class="vocab__btn" id="translation">
+                Goodbye (to more than one person).
+              </a>
+            </div>
+          </div>
       </div>
     </aside>
   </div>

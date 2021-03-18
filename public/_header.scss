@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  padding: 0 0.5rem;
+  background-color: #073b4c;
+  color: #06d6a0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4rem;
+}
+
+#lang {
+  font-family: $mukta;
+  font-weight: 200;
+}
+
+#back {
+  font-family: $mukta;
+  font-weight: 800;
+}
